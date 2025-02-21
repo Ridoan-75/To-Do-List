@@ -104,3 +104,10 @@ const getLocalTodos = () => {
         todoList.appendChild(li);
     });
 };
+
+// Function added for delete task from local storage
+const deleteLocalTodos = (todo) => {
+    let todos = JSON.parse(localStorage.getItem("todos")) || [];
+    todos = todos.filter(item => item !== todo);
+    localStorage.setItem("todos", JSON.stringify(todos));
+};
