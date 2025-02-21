@@ -24,6 +24,17 @@
                     transition-all duration-300 ease-in-out active:scale-95 font-medium" id="addBtn">Add</button>
             </div>
         </div>
+        <!-- To-Do List -->
+        <ul id="todoList" class="w-full max-w-md flex flex-col items-center space-y-3">
+            <li class="w-full list-none cursor-pointer rounded-lg border p-3 bg-white flex items-center justify-between transition-colors duration-500 hover:bg-gray-300">
+                <p class="flex-grow p-1">Task Text</p>
+                <div class="flex space-x-3">
+                    <button class="text-green-600 font-semibold px-2">Edit</button>
+                    <button class="text-red-600 font-semibold px-2">Remove</button>
+                </div>
+            </li>
+        </ul>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
