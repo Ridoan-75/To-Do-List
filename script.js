@@ -121,3 +121,6 @@ const editLocalTodos = (oldTodo, newTodo) => {
         localStorage.setItem("todos", JSON.stringify(todos));
     }
 };
+
+document.addEventListener("DOMContentLoaded", getLocalTodos);
+addBtn.addEventListener("click", addTodo);
