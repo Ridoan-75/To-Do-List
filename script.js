@@ -111,3 +111,13 @@ const deleteLocalTodos = (todo) => {
     todos = todos.filter(item => item !== todo);
     localStorage.setItem("todos", JSON.stringify(todos));
 };
+
+// Function to update 
+const editLocalTodos = (oldTodo, newTodo) => {
+    let todos = JSON.parse(localStorage.getItem("todos")) || [];
+    const index = todos.indexOf(oldTodo);
+    if (index !== -1) {
+        todos[index] = newTodo;
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }
+};
