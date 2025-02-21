@@ -64,3 +64,11 @@ const deleteTask = (li, text) => {
     todoList.removeChild(li);
     deleteLocalTodos(text);
 };
+
+// localstorage added
+const saveLocalTodos = (todo) => {
+    let todos = JSON.parse(localStorage.getItem("todos")) || [];
+    todos.push(todo);
+    localStorage.setItem("todos", JSON.stringify(todos));
+};
+
