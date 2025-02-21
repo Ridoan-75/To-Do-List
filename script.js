@@ -58,3 +58,9 @@ const editTask = (p, btn) => {
     addBtn.innerText = "Edit";
     editTodo = p;
 };
+
+// task delete edit
+const deleteTask = (li, text) => {
+    todoList.removeChild(li);
+    deleteLocalTodos(text);
+};
